@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+
+
+@media (max-width: 767px) {
+    .product {
+        width: 100%;  /* Que ocupe todo el ancho disponible */
+        max-width: 300px; /* Limitar tamaño máximo */
+        margin: auto;
+    }
+
+    .hero-text {
+        font-size: 1.2rem; /* Ajuste de texto */
+        padding: 10px;
+        text-align: center;
+    }
+
+    .hero-button {
+        width: 100%;
+        max-width: 250px;
+        display: block;
+        margin: auto;
+    }
+
+    .menu-icon {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f1e4;
+    color: #5a3e2b;
+    overflow-x: hidden;
+}
+h1 {
+    color: white !important; /* Fuerza el color blanco */
+    font-weight: bold; /* Hace que resalte más */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Agrega sombra negra para mejor contraste */
+    text-align: center;
+}
+
+h2 {
+    color: white !important; /* Fuerza el color blanco */
+    font-weight: bold; /* Hace que resalte más */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Agrega sombra negra para mejor contraste */
+}
+
+p {
+    color: white !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Contenedor del video */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Esto hace que el video ocupe toda la pantalla sin bordes blancos */
+}
+
+
+#inicio {
+    height: 100vh; /* Asegura que el video cubra toda la pantalla */
+    position: relative; /* Permite que otros elementos lo empujen hacia abajo */
+}
+
+
+/* Barra de navegación */
+.navbar-nav  {
+    position: fixed;
+    top: 20px; /* Ajuste de margen superior */
+    left: 65%;
+    transform: translateX(-5%); /* Centrado horizontal */
+    background-color: #008000;
+   
+    padding: 10px 30px;
+    border-radius: 15px;
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Caja de texto principal */
+.hero-text {
+    * Fondo oscuro semitransparente */
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    max-width: 50%;
+    margin: auto;
+    background: rgba(246, 166, 97, 0.9);
+    
+}
+
+
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(180deg, #EF7A15 10%, #E85414 30%, #FF6F00 100%);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+  
+
+#gifPanela {
+    width: 200px;  /* Ajusta el tamaño según prefieras */
+    height: auto;
+    position: absolute;
+    top: -90%;  /* Centra verticalmente */
+    left: 50%;  /* Centra horizontalmente */
+    transform: translate(-50%, -50%);  /* Ajusta el centro exacto */
+    z-index: 10;  /* Asegura que esté sobre el texto */
+}
+
+
+
+.playPauseBtn {
+    position: absolute;
+    top: -100%; /* Ajusta según la posición del pecho del muñeco */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; /* Ajusta el tamaño del botón animado */
+    height: 300px;
+    cursor: pointer;
+    z-index: 20; 
+}
+
+
+
+
+/* 🔲 Mejora en la apariencia de las tarjetas */
+/* Contenedor de productos */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap; /* Para que se acomoden bien en pantallas pequeñas */
+}
+
+/* Diseño de cada tarjeta de producto */
+.product {
+    background: linear-gradient(180deg, #EF7A15 10%, #E85414 30%, #FF6F00 100%);
+   
+    padding: 20px;
+    border-radius: 15px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo de la imagen del producto */
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilo de los textos */
+.product h3 {
+    font-size: 1.2em;
+    color: white;
+    margin-top: 10px;
+}
+
+.product p {
+    font-size: 1em;
+    color: white;
+}
+
+/* Botón de comprar */
+.btn-comprar {
+    background-color: #008000; /* Verde */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.btn-comprar:hover {
+    background-color: #006400;
+    transform: scale(1.1);
+    
+}
+
+
+/* Estilos generales */
+.timeline {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: #ffffff;
+    transform: translateX(-50%);
+}
+
+.timeline ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 50%;
+    padding: 80px;
+    box-sizing: border-box;
+}
+
+/* Estilos para elementos impares */
+.timeline ul li:nth-child(odd) {
+    float: left;
+    text-align: right;
+    clear: both;
+}
+
+.timeline ul li:nth-child(odd)::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    right: -14px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #000000;
+    border-radius: 50%;
+}
+
+.timeline ul li:nth-child(odd)::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    top: 44px;
+    right: 25px;
+    text-align: center;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent #ffffff;
+}
+
+/* Estilos para elementos pares */
+.timeline ul li:nth-child(even) {
+    float: right;
+    text-align: left;
+    clear: both;
+}
+
+.timeline ul li:nth-child(even)::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #19961d;
+    border-radius: 50%;
+}
+
+.timeline ul li:nth-child(even)::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    top: 44px;
+    left: 25px;
+    border-width: 10px 15px 10px 0px;
+    border-color: transparent #ffffff transparent transparent;
+}
+
+/* Estilos para los elementos de la línea de tiempo */
+.timeline-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.timeline-item .content {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 140, 0, 0.7);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.timeline-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* Estilos responsivos */
+@media all and (max-width: 768px) {
+    .timeline:before {
+        left: 10%;
+    }
+    .timeline ul li {
+        width: 100%;
+    }
+    .timeline ul li:nth-child(odd) {
+        float: right;
+        text-align: left;
+    }
+    .timeline ul li:nth-child(odd)::before {
+        left: -10px;
+    }
+    .timeline ul li:nth-child(odd)::after {
+        left: 25px;
+        border-width: 10px 15px 10px 0px;
+        border-color: transparent #6658ea transparent transparent;
+    }
+}
+
+/* Estilos adicionales */
+.content {
+    border: 2px solid #ffffff;
+    padding: 10px;
+    border-radius: 40px;
+    color: royalblue;
+    background: rgba(139, 69, 19, 0.8);
+    background-color: rgba(255, 102, 0, 0.85);
+    box-shadow: 0 0 1rem 0 rgba(139, 69, 19, 0.8);
+    transition: all 1s;
+    opacity: 0;
+}
+
+.timeline img {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+/* Estilos del cuadro naranja */
+.timeline ul li .content {
+    background: orange;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    max-width: 100%;
+}
+
+/* Ajuste de imagen dentro del cuadro */
+.timeline ul li .content img {
+   
+    height: auto;
+    display: block;
+    max-width: 700px; /* Ajusta según necesidades */
+    margin: 0 auto;
+}
+
+/* Ajuste del tamaño del cuadro naranja al tamaño de la imagen */
+.timeline ul li .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 0;
+}
+
+.timeline ul li .content img + h2,
+.timeline ul li .content img + p {
+    padding: 10px;
+}
+
+.footer-content {
+    background-color: #008000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-media {
+    margin-bottom: 10px;
+  }
+  
+  .social-icon img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .social-icon img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347;
+  }
+  
+  .map {
+    margin: 20px 0;
+  }
